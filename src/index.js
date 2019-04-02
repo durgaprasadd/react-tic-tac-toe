@@ -48,6 +48,10 @@ class Game extends React.Component {
     });
   }
 
+  isGameDraw() {
+    return this.state.grids.every(set => set.every(x => x));
+  }
+
   createCell(row, rowIndex) {
     return row.map((cell, cellIndex) => <td id={rowIndex * 3 + cellIndex} >{cell}</td>);
   }
@@ -56,7 +60,6 @@ class Game extends React.Component {
     const table = grids.map((row, rowIndex) => <tr>{this.createCell(row, rowIndex)}</tr>);
     return table;
   }
-
   printBoard() {
     let onclick = this.update.bind(this);
     let message = <h1>{this.state.turn}</h1>
@@ -64,7 +67,9 @@ class Game extends React.Component {
       onclick = null;
       message = <h1>{this.players[1].getWonMessage()}</h1>
     }
-
+    if (this.isGameDraw()) {
+      message = <h1>Game has drawn!</h1>
+    }
     return <div>{message}<table onClick={onclick}><tbody>{this.createRow(this.state.grids)}</tbody></table></div>;
   }
 

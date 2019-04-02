@@ -14,7 +14,7 @@ class Player {
     return `${this.name}'s turn`;
   }
   getWonMessage() {
-    return `${this.name} won`
+    return `${this.name} won!`
   }
   getSymbol() {
     return this.symbol;
