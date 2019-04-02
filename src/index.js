@@ -64,6 +64,7 @@ class Game extends React.Component {
       onclick = null;
       message = <h1>{this.players[1].getWonMessage()}</h1>
     }
+
     return <div>{message}<table onClick={onclick}><tbody>{this.createRow(this.state.grids)}</tbody></table></div>;
   }
 
