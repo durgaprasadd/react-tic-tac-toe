@@ -2,12 +2,12 @@
   "name": "tic-tac-toe",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://durgaprasadd.github.io/react-tic-tac-toe",
   "dependencies": {
     "gh-pages": "^2.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "2.1.8",
-    "homepage": "https://durgaprasadd.github.io/react-tic-tac-toe"
+    "react-scripts": "2.1.8"
   },
   "scripts": {
     "start": "react-scripts start",
